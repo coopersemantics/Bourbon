@@ -1,0 +1,68 @@
+/****************************************************************
+ * demo.css
+ ***************************************************************/
+
+/**
+ * Boilerplate
+ */
+
+.encapsulate:before, 
+.encapsulate:after {
+	content: "\0020";
+	height: 0;
+	display: block;
+	overflow: hidden;
+}
+	
+.encapsulate:after {
+	clear: both;
+}
+
+.encapsulate {
+	*zoom: 1;
+}
+
+.grid {
+	margin-right: 5px;
+	float: left;
+}
+
+.grid-last {
+	margin: 0;
+}
+
+.grid-1 {
+	width: 300px;
+}
+
+/**
+ * Demo Specific
+ */
+
+.section {
+	padding: 10px;
+	border-radius: 5px;
+	background-color: #5e97ab;
+	background: -ms-linear-gradient(top, #5e97ab 0%, #3d778a 100%);
+	background: linear-gradient(to bottom, #5e97ab 0%, #3d778a 100%);
+	color: #fff;
+}
+
+.section h1,
+.section h2 {
+	margin: 0 0 15px;
+	font: 28px/1.2 arial, sans-serif;
+}
+
+.section h2 {
+	font-size: 21px;
+}
+
+.section a {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.section a:hover {
+	text-decoration: none;
+}

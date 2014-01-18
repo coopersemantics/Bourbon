@@ -1,0 +1,13 @@
+language: node_js
+node_js:
+  - "0.10"
+env:
+  global:
+    - secure: "sNZ1ANIkwXZcwhCvp89ex6tU5++1xYTCUfjayS/0YZpaCeu0mab3qhQB+QhDhnE7SmQe+ZCGraLateXKfVGGW+eRACgMYAEqHpehm5hnLVLgyw99kLaCjYIHRtRvBgDaYLMfTyKsTOX2FTrx/0dm++H7nHyStidpZHU9FcSuZFM="
+    - secure: "QhahiEFHU9+miyaZw7Qecd5dWe66KPrHkx8Nraqnb+/NjmIxscb5xizx8j/atyNP4+0LGT65dDejFWOu/4L9MYiarRFWxMc+5Emx8IiK9zU6+vWZREL+xj0aH1CfI8FpvroOHPMO4KO4cLJ8gNcNkw96x0DHjj5r0Zirqde1LMI="
+notifications:
+  email: false
+before_script:
+  - npm install -g bower
+  - bower install
+script: grunt travis

@@ -1,0 +1,23 @@
+{
+	"boss": true,
+	"browser": true,
+	"curly": true,
+	"eqnull": true,
+	"expr": true,
+	"globals": {
+		"afterEach": true,
+		"beforeEach": true,
+		"describe": true,
+		"expect": true,
+		"it": true
+	},
+	"latedef": "nofunc",
+	"loopfunc": true,
+	"maxcomplexity": 13,
+	"newcap": true,
+	"noarg": true,
+	"noempty": true,
+	"strict": true,
+	"undef": true,
+	"unused": true
+}
