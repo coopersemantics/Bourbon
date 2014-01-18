@@ -166,9 +166,9 @@ module.exports = function(grunt) {
         }
     });
 
-    if (process.env.SAUCE_ACCESS_KEY) {
+    /*if (process.env.SAUCE_ACCESS_KEY) {
         testTasks.push("saucelabs-jasmine");
-    }
+    }*/
 
     /**
      * Load Npm Tasks
