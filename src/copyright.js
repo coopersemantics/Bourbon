@@ -1,5 +1,5 @@
 /**!
- * Bourbon.js - JavaScript Library v<%= pkg.version %>
+ * Bourbon.js - A lightweight JavaScript library v<%= pkg.version %>
  *
  * Copyright <%= grunt.template.today("yyyy") %>, coopersemantics
  * Bourbon.js is freely distributable under the MIT license.

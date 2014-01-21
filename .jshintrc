@@ -7,7 +7,6 @@
 	"loopfunc": true,
 	"maxcomplexity": 13,
 	"newcap": true,
-	"strict": true,
 	"noarg": true,
 	"node": true,
 	"noempty": true,

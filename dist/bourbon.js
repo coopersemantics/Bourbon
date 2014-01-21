@@ -1,10 +1,10 @@
 /**!
- * Bourbon.js - JavaScript Library v0.1.1
+ * Bourbon.js - A lightweight JavaScript library v0.1.0
  *
  * Copyright 2014, coopersemantics
  * Bourbon.js is freely distributable under the MIT license.
  *
- * Date: Sat Jan 18 2014 01:30:18
+ * Date: Mon Jan 20 2014 21:37:49
  */
  
  (function(definition) {
@@ -69,7 +69,7 @@ var Bourbon = function(node, index) {
  * Bourbon's current version
  */
 
-Bourbon.version = "0.1.1";
+Bourbon.version = "0.1.0";
 
 Bourbon.fn = Bourbon.prototype;
 

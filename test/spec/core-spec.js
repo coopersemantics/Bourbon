@@ -1,5 +1,4 @@
 describe("core", function() {
-
 	"use strict";
 
 	describe("being only a test :-)", function() {
