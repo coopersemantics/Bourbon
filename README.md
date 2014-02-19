@@ -9,7 +9,7 @@ Bourbon requires [git](http://git-scm.com/downloads) and [Node.js](http://nodejs
 
 ## Compiling client code:
 
-Bourbon.js uses the [grunt](https://github.com/cowboy/grunt) build system.
+Bourbon.js uses the [grunt](https://github.com/gruntjs/grunt) build system.
 
 ```bash
 # Install Grunt & Bower globally:

@@ -84,10 +84,8 @@ Bourbon.extend(Bourbon, {
 	 */
 
 	noConflict: function() {
-		if (typeof _Bourbon !== "undefined") {
-			_root.Bourbon = _Bourbon;
-		}
-		
+		_root.Bourbon = (_Bourbon || Bourbon);
+
 		return Bourbon;
 	}
 });

@@ -4,7 +4,7 @@
  * Copyright 2014, coopersemantics
  * Bourbon.js is freely distributable under the MIT license.
  *
- * Date: Mon Jan 20 2014 21:37:49
+ * Date: Tue Feb 18 2014 21:21:08
  */
  
  (function(definition) {
@@ -170,10 +170,8 @@ Bourbon.extend(Bourbon, {
 	 */
 
 	noConflict: function() {
-		if (typeof _Bourbon !== "undefined") {
-			_root.Bourbon = _Bourbon;
-		}
-		
+		_root.Bourbon = (_Bourbon || Bourbon);
+
 		return Bourbon;
 	}
 });
