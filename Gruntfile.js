@@ -3,7 +3,7 @@ module.exports = function(grunt) {
 
     var fs = require("fs");
     var gzip = require("gzip-js");
-    var testTasks = ["jshint", "connect:server", "jasmine"];
+    var testTasks = ["jshint"/*, "connect:server"*/];
     var jsFiles = [
         "src/core/var.js",
         "src/core/init.js",
@@ -91,74 +91,6 @@ module.exports = function(grunt) {
             }
         },
 
-        jasmine: {
-            src: jsFiles,
-            options: {
-                specs: "test/spec/*spec.js"
-            }
-        },
-
-        "saucelabs-jasmine": {
-            all: {
-                options: {
-                    urls: ["http://127.0.0.1:8001/test/SpecRunner.html"],
-                    testTimeout: 300000,
-                    build: process.env.TRAVIS_JOB_ID,
-                    concurrency: 3,
-                    browsers : [
-                        {
-                            browserName : "firefox",
-                            platform : "Windows 8.1"
-                        },
-                        {
-                            browserName : "firefox",
-                            platform : "Linux"
-                        },
-                        {
-                            browserName: "chrome",
-                            platform: "Windows 8.1"
-                        },
-                        {
-                            browserName: "chrome",
-                            platform: "Linux"
-                        },
-                        {
-                            browserName: "chrome",
-                            platform: "OS X 10.9"
-                        },
-                        {
-                            browserName: "safari",
-                            platform: "OS X 10.8"
-                        },
-                        {
-                            browserName: "iphone",
-                            platform: "OS X 10.8"
-                        },
-                        {
-                            browserName: "internet explorer",
-                            platform: "Windows 8",
-                            version: "10"
-                        },
-                        {
-                            browserName: "internet explorer",
-                            platform: "Windows 8.1",
-                            version: "11"
-                        },
-                        {
-                            browserName: "internet explorer",
-                            platform: "Windows 7",
-                            version: "9"
-                        },
-                        {
-                            browserName: "internet explorer",
-                            platform: "Windows XP",
-                            version: "8"
-                        }
-                    ]
-                }
-            }
-        },
-
         watch: {
             files: ["Gruntfile.js", "src/*.js", "src/**/*.js", "/test/spec/*.js", "test/*.html"],
             tasks: "dev"
@@ -166,7 +98,7 @@ module.exports = function(grunt) {
     });
 
     /*if (process.env.SAUCE_ACCESS_KEY) {
-        testTasks.push("saucelabs-jasmine");
+        //
     }*/
 
     /**
@@ -176,7 +108,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks("grunt-compare-size");
     grunt.loadNpmTasks("grunt-contrib-concat");
     grunt.loadNpmTasks("grunt-contrib-connect");
-    grunt.loadNpmTasks("grunt-contrib-jasmine");
     grunt.loadNpmTasks("grunt-contrib-jshint");
     grunt.loadNpmTasks("grunt-contrib-uglify");
     grunt.loadNpmTasks("grunt-saucelabs");
@@ -188,9 +119,9 @@ module.exports = function(grunt) {
 
     grunt.registerTask("default", ["concat", "uglify", "compare_size"].concat(testTasks));
     grunt.registerTask("dev", "default");
-    grunt.registerTask("keepAlive", ["connect:client"]);
+    //grunt.registerTask("keepAlive", ["connect:client"]);
     grunt.registerTask("lint", ["concat", "jshint"]);
     grunt.registerTask("test", testTasks);
     grunt.registerTask("travis", "default");
-    grunt.registerTask("unitTest", "jasmine");
+    grunt.registerTask("unitTest");
 };

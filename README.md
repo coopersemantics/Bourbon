@@ -1,5 +1,4 @@
 # Bourbon.js [![Build Status](https://secure.travis-ci.org/coopersemantics/Bourbon.png?branch=master)](https://travis-ci.org/coopersemantics/Bourbon)
-[![Selenium Test Status](https://saucelabs.com/browser-matrix/Bourbon.svg)](https://saucelabs.com/u/Bourbon)
 
 A lightweight JavaScript library.
 

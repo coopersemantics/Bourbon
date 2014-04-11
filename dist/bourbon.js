@@ -4,7 +4,7 @@
  * Copyright 2014, coopersemantics
  * Bourbon.js is freely distributable under the MIT license.
  *
- * Date: Tue Feb 18 2014 21:21:08
+ * Date: Thu Apr 10 2014 22:57:27
  */
  
  (function(definition) {
@@ -96,25 +96,13 @@ Bourbon.fn.init.prototype = Bourbon.fn;
  */
 
 Bourbon.extend = Bourbon.fn.extend = function(destination, source) {
-	for (var property in source) {
-		destination[property] = source[property];
+	if (arguments.length !== 2) {
+		source = arguments[0];
+		destination = this;
 	}
 
-	return destination;
-};
-
-/**
- * Merges 'source' to 'destination' and returns the result of that merge
- * @param {Object} destination
- * @param {Object} source
- * @returns {Object}
- */
-
-Bourbon.merge = Bourbon.fn.merge = function(destination, source) {
 	for (var property in source) {
-		if (!_hasOwnProperty.call(destination, property)) {
-			destination[property] = source[property];
-		}
+		destination[property] = source[property];
 	}
 
 	return destination;
@@ -127,7 +115,7 @@ Bourbon.merge = Bourbon.fn.merge = function(destination, source) {
 
 Bourbon.noop = function() {};
 
-Bourbon.extend(Bourbon, {
+Bourbon.extend({
 
 	/**
 	 * Sets the mode to 'prod' by default, so that logging doesn't occur
@@ -154,23 +142,12 @@ Bourbon.extend(Bourbon, {
 	})(),
 
 	/**
-	 * Creates a plugin architecture
-	 * @param {Object} destination
-	 * @param {Object} source
-	 * @returns {Void}
-	 */
-
-	addMethod: function(destination, source) {
-		Bourbon.merge(destination, source);
-	},
-
-	/**
 	 * Runs Bourbon.js in 'noConflict' mode
 	 * @returns {Function}
 	 */
 
 	noConflict: function() {
-		_root.Bourbon = (_Bourbon || Bourbon);
+		_root.Bourbon = _Bourbon;
 
 		return Bourbon;
 	}
@@ -180,7 +157,7 @@ Bourbon.extend(Bourbon, {
  * DOM - Selector
  */
 
-Bourbon.extend(Bourbon.fn, {
+Bourbon.fn.extend({
 	
 	/**
 	 * Retrieves the raw node
@@ -243,7 +220,7 @@ Bourbon.extend(Bourbon.fn, {
 	}
 });
 
-Bourbon.extend(Bourbon, {
+Bourbon.extend({
 	/**
 	 * Checks whether an object is indeed an element
 	 * @param {Object} object
@@ -259,7 +236,7 @@ Bourbon.extend(Bourbon, {
  * DOM - Event
  */
 
-Bourbon.extend(Bourbon, {
+Bourbon.extend({
 
 	/**
 	 * Executes a given callback, once the DOM is fully loaded
@@ -413,7 +390,7 @@ Bourbon.extend(Bourbon, {
 	})()
 });
 
-Bourbon.extend(Bourbon.fn, {
+Bourbon.fn.extend({
 
 	/**
 	 * Registers event handler(s)
@@ -501,7 +478,7 @@ Bourbon.extend(Bourbon.fn, {
  * Lang - Function
  */
 
-Bourbon.extend(Bourbon, {
+Bourbon.extend({
 
 	/**
 	 * Binds an object to a function, and partially applies the function with usually one or more arguments
@@ -682,7 +659,7 @@ Bourbon.extend(Bourbon, {
  * Lang - Object
  */
 
-Bourbon.extend(Bourbon, {
+Bourbon.extend({
 
 	/**
 	 * Clones the passed object using shallow copy
@@ -735,7 +712,7 @@ Bourbon.extend(Bourbon, {
  * Lang - Array
  */
 
-Bourbon.extend(Bourbon, {
+Bourbon.extend({
 
 	/**
 	 * Flattens array
@@ -773,7 +750,7 @@ Bourbon.extend(Bourbon, {
  * Lang - String
  */
  
-Bourbon.extend(Bourbon, {
+Bourbon.extend({
 
 	/**
 	 * Strips all leading and trailing whitespace from a string

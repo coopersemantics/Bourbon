@@ -2,7 +2,7 @@
  * Lang - String
  */
  
-Bourbon.extend(Bourbon, {
+Bourbon.extend({
 
 	/**
 	 * Strips all leading and trailing whitespace from a string

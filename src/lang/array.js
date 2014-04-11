@@ -2,7 +2,7 @@
  * Lang - Array
  */
 
-Bourbon.extend(Bourbon, {
+Bourbon.extend({
 
 	/**
 	 * Flattens array

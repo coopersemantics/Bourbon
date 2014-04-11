@@ -2,9 +2,7 @@
     "name": "Bourbon",
     "version": "0.1.0",
     "main": "./dist/bourbon.min.js",
-    "devDependencies": {
-        "jasmine": "2.0.0"
-    },
+    "devDependencies": {},
     "ignore": [
         "**/.*",
         "*.md",

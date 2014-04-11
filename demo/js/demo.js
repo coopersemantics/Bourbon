@@ -1,9 +1,8 @@
-/****************************************************************
- * demo.js
- ***************************************************************/
+/**
+ * Demo
+ */
 
 (function() {
-
 	"use strict";
 
 	/**
@@ -16,7 +15,7 @@
 	 * An example of how a plugin would be constructed 
 	 */
 
-	Bourbon.addMethod(Bourbon.fn, {
+	Bourbon.fn.extend({
 		highlight: function(cssText) {
 			var instance = this;
 
@@ -130,5 +129,4 @@
 				.innerHTML = instance.barBaz;
 		}
 	}).initialize();
-
 })();

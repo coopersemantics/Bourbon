@@ -2,7 +2,7 @@
  * DOM - Event
  */
 
-Bourbon.extend(Bourbon, {
+Bourbon.extend({
 
 	/**
 	 * Executes a given callback, once the DOM is fully loaded
@@ -156,7 +156,7 @@ Bourbon.extend(Bourbon, {
 	})()
 });
 
-Bourbon.extend(Bourbon.fn, {
+Bourbon.fn.extend({
 
 	/**
 	 * Registers event handler(s)

@@ -2,7 +2,7 @@
  * Lang - Function
  */
 
-Bourbon.extend(Bourbon, {
+Bourbon.extend({
 
 	/**
 	 * Binds an object to a function, and partially applies the function with usually one or more arguments

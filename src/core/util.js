@@ -10,25 +10,13 @@
  */
 
 Bourbon.extend = Bourbon.fn.extend = function(destination, source) {
-	for (var property in source) {
-		destination[property] = source[property];
+	if (arguments.length !== 2) {
+		source = arguments[0];
+		destination = this;
 	}
 
-	return destination;
-};
-
-/**
- * Merges 'source' to 'destination' and returns the result of that merge
- * @param {Object} destination
- * @param {Object} source
- * @returns {Object}
- */
-
-Bourbon.merge = Bourbon.fn.merge = function(destination, source) {
 	for (var property in source) {
-		if (!_hasOwnProperty.call(destination, property)) {
-			destination[property] = source[property];
-		}
+		destination[property] = source[property];
 	}
 
 	return destination;
@@ -41,7 +29,7 @@ Bourbon.merge = Bourbon.fn.merge = function(destination, source) {
 
 Bourbon.noop = function() {};
 
-Bourbon.extend(Bourbon, {
+Bourbon.extend({
 
 	/**
 	 * Sets the mode to 'prod' by default, so that logging doesn't occur
@@ -68,23 +56,12 @@ Bourbon.extend(Bourbon, {
 	})(),
 
 	/**
-	 * Creates a plugin architecture
-	 * @param {Object} destination
-	 * @param {Object} source
-	 * @returns {Void}
-	 */
-
-	addMethod: function(destination, source) {
-		Bourbon.merge(destination, source);
-	},
-
-	/**
 	 * Runs Bourbon.js in 'noConflict' mode
 	 * @returns {Function}
 	 */
 
 	noConflict: function() {
-		_root.Bourbon = (_Bourbon || Bourbon);
+		_root.Bourbon = _Bourbon;
 
 		return Bourbon;
 	}

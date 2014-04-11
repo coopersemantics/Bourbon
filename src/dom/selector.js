@@ -2,7 +2,7 @@
  * DOM - Selector
  */
 
-Bourbon.extend(Bourbon.fn, {
+Bourbon.fn.extend({
 	
 	/**
 	 * Retrieves the raw node
@@ -65,7 +65,7 @@ Bourbon.extend(Bourbon.fn, {
 	}
 });
 
-Bourbon.extend(Bourbon, {
+Bourbon.extend({
 	/**
 	 * Checks whether an object is indeed an element
 	 * @param {Object} object

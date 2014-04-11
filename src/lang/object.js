@@ -2,7 +2,7 @@
  * Lang - Object
  */
 
-Bourbon.extend(Bourbon, {
+Bourbon.extend({
 
 	/**
 	 * Clones the passed object using shallow copy
