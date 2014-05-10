@@ -2,33 +2,33 @@
 
 A lightweight JavaScript library.
 
-## What's required:
+## What's Required
 
 Bourbon requires [git](http://git-scm.com/downloads) and [Node.js](http://nodejs.org/download/) before proceeding.
 
-## Compiling client code:
+## Compiling Client Code
 
 Bourbon.js uses the [grunt](https://github.com/gruntjs/grunt) build system.
 
 ```bash
-# Install Grunt & Bower globally:
+# Install Grunt & Bower globally
 $ {sudo} npm install -g grunt-cli bower
 
-# Clone the Bourbon git repo:
+# Clone the Bourbon git repo
 $ git clone git@github.com:coopersemantics/Bourbon.git
 
-# Navigate to the root /Bourbon directory:
+# Navigate to the root /Bourbon directory
 $ cd Bourbon
 
-# Install necessary dependencies:
+# Install necessary dependencies
 $ npm install
 $ bower install
 
-# Run grunt:
+# Run grunt
 $ grunt
 ```
 
-### Grunt Tasks:
+### Grunt Tasks
 
 Test:
 ```bash
@@ -45,13 +45,13 @@ For a list of all the available tasks:
 $ grunt --help
 ```
 
-## Browser:
+## Browser
 
 ```html
 <script src="path/to/bourbon.min.js"></script>
 ```
 
-## Versioning:
+## Versioning
 
 Releases will be numbered using the following format:
 
@@ -71,7 +71,7 @@ For more information on SemVer, please visit <http://semver.org/>.
 
 coopersemantics
 
-## Copyright and license
+## Copyright and License
 
 Copyright 2014 coopersemantics under the [MIT license](https://github.com/coopersemantics/Bourbon/blob/master/MIT-LICENSE.txt).
 
